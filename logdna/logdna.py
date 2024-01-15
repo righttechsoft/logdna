@@ -18,10 +18,10 @@ class LogDNAHandler(logging.Handler):
 
         # Set Internal Logger
         self.internal_handler = logging.StreamHandler(sys.stdout)
-        self.internal_handler.setLevel(logging.DEBUG)
+        self.internal_handler.setLevel(logging.CRITICAL)
         self.internalLogger = logging.getLogger('internal')
         self.internalLogger.addHandler(self.internal_handler)
-        self.internalLogger.setLevel(logging.DEBUG)
+        self.internalLogger.setLevel(logging.CRITICAL)
 
         # Set the Custom Variables
         self.key = key
